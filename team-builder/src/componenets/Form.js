@@ -20,7 +20,7 @@ const Form = props => {
             event.preventDefault()
             props.addTeamMember(teamMember)
 
-            setTeamMember({})
+            setTeamMember({name: "", email: "", role: "", id: Date.now()})
         }} >
             <lable htmlFor="name">Name:</lable>
             <input
