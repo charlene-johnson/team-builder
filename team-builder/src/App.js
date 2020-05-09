@@ -1,8 +1,15 @@
 import React, {useState} from 'react';
 import './App.css';
+import styled from "styled-components";
 
 import Form from "./componenets/Form"
 import MemberList from "./componenets/MemberList"
+
+const Title = styled.h1 `
+font-size:  5rem;
+font-family: 'Architects Daughter', cursive;
+margin-top: 1.5%;
+`
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([
@@ -18,7 +25,7 @@ const addTeamMember =(newTeamMember) => {
 }
   return (
     <div className="App">
-      <h1>Team Members</h1>
+      <Title>Team Members</Title>
       <Form addTeamMember={addTeamMember}/>
       <MemberList teamMembers={teamMembers} />
     </div>
